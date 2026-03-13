@@ -58,6 +58,7 @@ All backend data is stored in MongoDB. To use **MongoDB Atlas**:
 
 ## Deployment Notes
 
+- **Microsoft Azure**: For a full step-by-step guide from the basics (GitHub, Azure Portal, Web App + Static Web App), see **[DEPLOY-AZURE.md](./DEPLOY-AZURE.md)**.
 - **MongoDB Atlas**: Use the steps above; set `MONGO_URI` in backend `.env` (and in your host’s env vars when deploying).
 - **Render (backend)**:
   - Create a new Web Service from the `backend` folder.
