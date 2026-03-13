@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-white antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-5 py-2 rounded-full bg-neon-cyan text-black text-sm font-semibold hover:bg-cyan-300 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-cyan/70;
+  }
+
+  .btn-outline {
+    @apply px-5 py-2 rounded-full border border-slate-600 text-sm hover:border-neon-magenta transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-magenta/70;
+  }
+
+  .card {
+    @apply rounded-2xl border border-slate-800 bg-slate-900/70 shadow-lg shadow-cyan-500/10;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full border border-slate-700 bg-slate-900/80 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-slate-300;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/40;
+  }
+
+  .select {
+    @apply w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/40;
+  }
+
+  .btn-issue-pulse {
+    @apply relative inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 via-indigo-400 to-fuchsia-400 px-6 py-2 text-sm font-semibold text-slate-950 shadow-[0_0_30px_rgba(56,189,248,0.7)];
+  }
+
+  .btn-issue-pulse::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(56,189,248,0.6), transparent 60%);
+    opacity: 0.0;
+    animation: pulse-ring 1.8s infinite;
+  }
+
+  .btn-issue-pulse span {
+    position: relative;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.0;
+  }
+  40% {
+    transform: scale(1.05);
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0.0;
+  }
+}
+
+

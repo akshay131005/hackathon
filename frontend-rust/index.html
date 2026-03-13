@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PrivacyPass Rust Frontend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #020617;
+        --card: #020617;
+        --border: #1e293b;
+        --accent: #22d3ee;
+        --accent2: #a855f7;
+        --text: #e5e7eb;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: radial-gradient(circle at top, #0f172a 0, #020617 50%);
+        color: var(--text);
+      }
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .shell {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 1.25rem 1rem 2.5rem;
+      }
+      .card {
+        border-radius: 1rem;
+        border: 1px solid var(--border);
+        background: radial-gradient(circle at top left, #0b1120 0, #020617 55%);
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
